@@ -72,7 +72,7 @@ npm test
 
 ## StoryBook Preview 
 You can view the live storybook deployment of components here : 
-[https://68b08f1ee058ca33850a6aff-frvtnutbbb.chromatic.com/](https://68b08f1ee058ca33850a6aff-npeehlnkdo.chromatic.com/)
+[https://68b08f1ee058ca33850a6aff-npeehlnkdo.chromatic.com/](https://68b08f1ee058ca33850a6aff-npeehlnkdo.chromatic.com/)
 
 ## Component Previews
 You can view the Preview of All components below : 
