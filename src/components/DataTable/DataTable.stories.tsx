@@ -19,9 +19,9 @@ const columns: Column<User>[] = [
 
 // below are example data
 const data: User[] = [
-  { id: 1, name: "Alice", email: "alice@example.com", age: 25 },
-  { id: 2, name: "Bob", email: "bob@example.com", age: 30 },
-  { id: 3, name: "Charlie", email: "charlie@example.com", age: 22 },
+  { id: 1, name: "Rohan", email: "Rohan123@example.com", age: 25 },
+  { id: 2, name: "Rahul", email: "Rahul321@example.com", age: 30 },
+  { id: 3, name: "Aniket", email: "aniket@example.com", age: 22 },
 ];
 
 const UserTable = (props: DataTableProps<User>) => <DataTable<User> {...props} />;

@@ -1,69 +1,101 @@
-# React + TypeScript + Vite
+# React Component Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+In this project, I created two reuseable components using **React**, **Typescript**, and modern design patterns, which I documented on Storybook. The components were created with future growth and expansion in mind, facilitating their easy adoption or integration into larger scale projects.
 
-Currently, two official plugins are available:
+The components include:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **InputField** – An all-purpose input component with optional validation, different input types, and sizes.
+2. **DataTable** – A data table with sortable columns, selectable rows, and loading and empty states.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Components
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### **1. InputField**
+I created an all-purpose input component to address the following needs:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Features implemented:**
+  - Text input with label, placeholder, helper text, and error messages.
+  - States: `disabled`, `invalid`, `loading`.
+  - Variants: `filled`, `outlined`, `ghost`.
+  - Sizes: `small`, `medium`, `large`.
+  
+- **Approach:**
+  - Used **TypeScript** for typing props (`InputFieldProps`) for type safety.
+  - Password toggle handled with a local `useState`.
+  - Conditional styling based on props for disabled, invalid, and variant states.
+  - Designed for **scalability** by allowing additional variants or states to be easily added in the future.
+  
+- **Storybook:** 
+  - Documented with stories showing default, password toggle, disabled, error, and loading states.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### **2. DataTable**
+I built a generic and reusable table component for displaying tabular data:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Features implemented:**
+  - Displays tabular data based on passed `columns` and `data`.
+  - Column sorting for sortable columns.
+  - Row selection (single/multiple) with callback.
+  - Loading state and empty state messages.
+  - Clean and modern styling using Tailwind CSS.
+  
+- **Approach:**
+  - Used **TypeScript generics** (`DataTable<T>`) to make the table flexible for any data type.
+  - Internal state for sorting and row selection.
+  - Simple, scalable logic for sorting toggle and row selection.
+  
+- **Storybook:** 
+  - Documented with stories for default, loading, empty, selectable rows, and sorting behavior.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## Setup Instructions
+
+# Clone the repository
+git clone https://github.com/Suryadev78/Frontend-assignment.git
+cd frontend-assignment
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+
+# Run Storybook
+npm run storybook
+
+# Run tests
+npm test
+
+## StoryBook Preview 
+You can view the live storybook deployment of components here : 
+[https://68b08f1ee058ca33850a6aff-frvtnutbbb.chromatic.com/](https://68b08f1ee058ca33850a6aff-frvtnutbbb.chromatic.com/)
+
+## Component Previews
+You can view the Preview of All components below : 
+**InputField**
+![InputField Default](./src/screenshots/InputField-default.png)
+![InputField Loading](./src/screenshots/DataTable-loading.png)
+![InputField Disabled](./src/screenshots/InputField-disabled.png)
+![InputField Invalid](./src/screenshots/Inputfield-invalid.png)
+![InputField Password](./src/screenshots/InputField-password.png)
+
+**DataTable**
+![DataTable Default](./src/screenshots/DataTable-default.png)
+![DataTable Loading](./src/screenshots/DataTable-loading.png)
+![DataTable Empty](./src/screenshots/DataTable-empty.png)
+![DataTable Selectable](./src/screenshots/DataTable-selectable.png)
+![DataTable Sortable](./src/screenshots/DataTable-sortable.png)
+
+
+
+
+
+
+
+
+
+

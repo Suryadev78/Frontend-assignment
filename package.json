@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_07d49099bd3e3d0"
   },
   "dependencies": {
     "lucide-react": "^0.542.0",
